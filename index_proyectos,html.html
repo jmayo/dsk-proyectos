@@ -70,6 +70,7 @@
 			<li><a class="ico_acciones" href="#"><i class="fa fa-file fa-2x"></i></a></li>
 			<li><a class="ico_acciones" href="#"><i class="fa fa-remove fa-2x"></i></a></li>
 			<li><a class="ico_acciones" href="#"><i class="fa fa-save fa-2x"></i></a></li>
+			<li><input type="text" placeholder="Buscar" class="buscar"/></li>
 		</ul>
 	</div>
 	<section class="contenido">
@@ -81,56 +82,116 @@
 				<div class="campos_bloque">
 					<ul class="ul_bloque">
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="id_empleado">Id Empleado</label>
-							<input class="inputs_bloque" type="text" placeholder="Id Empleado"/>
+							<label class="etiquetas_bloque" for="id_proyecto">Id</label>
+							<input class="inputs_bloque" type="text" placeholder="Id"/>
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="paterno">Paterno</label>
-							<input class="inputs_bloque" type="text" placeholder="Paterno" />
+							<label class="etiquetas_bloque" for="nombre_cliente">Nombre/Cliente</label>
+							<input class="inputs_bloque" type="text" placeholder="Nombre/Cliente" />
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="materno">Materno</label>
-							<input class="inputs_bloque" type="text" placeholder="Materno" />
+							<label class="etiquetas_bloque" for="descripcion">Descripción</label>
+							<textarea class="textarea_bloque" name="descripcion_proyecto" placeholder="Descripción"></textarea>
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="nombres">Nombre(s)</label>
-							<input class="inputs_bloque" type="text" placeholder="Nombre(s)" />
+							<label class="etiquetas_bloque" for="fecha_inicio">Fecha de inicio</label>
+							<input id="cal_fec_ini" class="inputs_bloque" type="text" placeholder="Fecha de inicio" />
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="rfc">RFC</label>
-							<input class="inputs_bloque" type="text" placeholder="RFC" />
+							<label class="etiquetas_bloque" for="fecha_termino">Fecha de termino</label>
+							<input id="cal_fec_ter" class="inputs_bloque" type="text" placeholder="Fecha de termino" />
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="curp">CURP</label>
-							<input class="inputs_bloque" type="text" placeholder="CURP" />
+							<label class="etiquetas_bloque" for="status">Estatus</label>
+							<select name="estatus" class="select_bloque">
+								<option value="activo">Activo</option>
+								<option value="cancelado">Cancelado</option>
+								<option value="baja">Baja</option>
+							</select>
+							<div class="viñeta"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+		<article class="bloque">
+			<div class="titulo_bloque">
+				Obra
+			</div>
+			<div class="caja_bloque">
+				<div class="campos_bloque">
+					<ul class="ul_bloque">
+						<li class="li_bloque">
+							<label class="etiquetas_bloque" for="supervisor">Supervisor</label>
+							<input class="inputs_bloque" type="text" placeholder="Supervisor" />
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="cuip">CUIP</label>
-							<input class="inputs_bloque" type="text" placeholder="CUIP" />
+							<label class="etiquetas_bloque" for="administrador">Administrador</label>
+							<input class="inputs_bloque" type="text" placeholder="Administrador" />
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="fecha_nacimiento">Fecha de Nacimiento</label>
-							<input id="cal_fec_nac" class="inputs_bloque" type="text" placeholder="Fecha de Nacimiento" />
+							<label class="etiquetas_bloque" for="no_edificios">No. Edificios</label>
+							<input class="inputs_bloque" type="text" placeholder="No. Edificios" />
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="lugar_nacimiento_estado">Lugar de Nacimiento</label>
-							<select name="estado" class="select_bloque">
+							<label class="etiquetas_bloque" for="tipo_edificio">Tipo Edificio</label>
+							<select name="tipo_edificio" class="select_bloque">
+								<option value="dormitorio">Dormitorio</option>
+								<option value="comedor">Comedor</option>
+								<option value="alojamiento">Alojamiento</option>
+							</select>
+							<div class="viñeta"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+		<article class="bloque">	
+			<div class="titulo_bloque">
+				Ubicación/Domicilio
+			</div>
+			<div class="caja_bloque">
+				<div class="campos_bloque">
+					<ul class="ul_bloque">
+						<li class="li_bloque">
+							<label class="etiquetas_bloque" for="calle">Calle</label>
+							<textarea class="textarea_bloque" name="calle" placeholder="Calle"></textarea>
+							<div class="viñeta"></div>
+						</li>
+						<li class="li_bloque">
+							<label class="etiquetas_bloque" for="numero">Número</label>
+							<input class="inputs_bloque" type="text" placeholder="Número" />
+							<div class="viñeta"></div>
+						</li>
+						<li class="li_bloque">
+							<label class="etiquetas_bloque" for="colonia">Colonia</label>
+							<input class="inputs_bloque" type="text" placeholder="Colonia" />
+							<div class="viñeta"></div>
+						</li>						
+						<li class="li_bloque">
+							<label class="etiquetas_bloque" for="codigo_postal">Código Postal</label>
+							<input class="inputs_bloque" type="text" placeholder="Código Postal" />
+							<div class="viñeta"></div>
+						</li>
+						<li class="li_bloque">
+							<label class="etiquetas_bloque" for="calle_estado">Estado</label>
+							<select name="calle_estado" class="select_bloque">
 								<option value="estado_de_mexico">Estado de México</option>
 								<option value="distrito_federal">Distrito Federal</option>
 							</select>
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="lugar_nacimiento_municipio"></label>
-							<select name="municipio" class="select_bloque">
+							<label class="etiquetas_bloque" for="calle_municipio">Municipio</label>
+							<select name="calle_municipio" class="select_bloque">
 								<option value="tlalnepantla">Tlalnepantla</option>
 								<option value="naucalpan">Naucalpan</option>
 								<option value="miguel_hidalgo">Miguel Hidalgo</option>
@@ -139,48 +200,8 @@
 							<div class="viñeta"></div>
 						</li>
 						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="estado_civil">Estado Civil</label>
-							<select name="estado_civil" class="select_bloque">
-								<option value="soltero">Soltero</option>
-								<option value="casado">Casado</option>
-							</select>
-							<div class="viñeta"></div>
-						</li>
-						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="escolaridad">Escolaridad</label>
-							<select name="escolaridad" class="select_bloque">
-								<option value="primaria">Primaria</option>
-								<option value="secundaria">Secundaria</option>
-							</select>
-							<div class="viñeta"></div>
-						</li>
-						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="religion">Religión</label>
-							<select name="religion" class="select_bloque">
-								<option value="budaismo">Budaismo</option>
-								<option value="cristianismo">Cristianismo</option>
-							</select>
-							<div class="viñeta"></div>
-						</li>
-						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="portacion">Portación</label>
-							<input class="radio_bloque" type="radio" name="portacion" value="si">
-							<label for="portacion"><span><span></span></span>Si</label>
-							<input class="radio_bloque" type="radio" name="portacion" value="no" checked="checked">
-							<label for="portacion"><span><span></span></span>No</label>
-						</li>
-						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="seguridad_social">Seguridad Social</label>
-							<select name="seguridad_social" class="select_bloque">
-								<option value="imss">IMSS</option>
-								<option value="issste">ISSSTE</option>
-								<option value="issemym">ISSEMYM</option>
-							</select>
-							<div class="viñeta"></div>
-						</li>
-						<li class="li_bloque">
-							<label class="etiquetas_bloque" for="id_seguridad_social">Id. Seguridad Social</label>
-							<input class="inputs_bloque" type="text" placeholder="Id. Seguridad Social" />
+							<label class="etiquetas_bloque" for="calle_ciudad">Ciudad/Población</label>
+							<input class="inputs_bloque" type="text" placeholder="Ciudad/Población" />
 							<div class="viñeta"></div>
 						</li>
 					</ul>
