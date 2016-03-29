@@ -1,0 +1,1431 @@
+// colores nuevos
+c1=#004F7F
+c2=#65C4FF
+c3=#009EFF
+c4=#1D5A7F
+c5=#007ECC
+//
+gris_claro=#dddddc
+gris_oscuro=#30302f
+gris_medio=#696868
+rosa=#df7250
+verde=#1cb28c
+verde_rgb=rgb(28,178,140)
+gris_claro_rgb_1=rgb(192,192,192)
+gris_claro_rgb_2=rgb(224,224,224)
+gris_claro_rgb_3=rgb(240,240,240)
+gris_claro_rgba_1=rgba(0, 0, 0, 0.5)
+rojo_vineta=#ff7070
+
+nav
+	display inline-block
+	position fixed
+	top 0
+	width 100%
+	z-index 9
+	.menu
+		overflow-x auto
+		background c4
+		margin 0
+		padding 0
+		li
+			display inline-block
+			padding 0.5em
+			a
+				color gris_claro
+				text-decoration none
+			a.ico_nav
+				&:hover
+					color white
+			a.ico_logout
+				color white
+				&:hover
+					color gris_claro
+.caja_acciones
+	background gris_claro
+	margin-top -1em
+	padding 0
+	position fixed
+	text-align center
+	width 100%
+	z-index 8
+	.menu_acciones
+		overflow-x auto
+		margin 4px
+		padding 0
+		li
+			display inline-block
+			padding-left 0.5em
+			a
+				color gris_medio
+				text-decoration none
+			a.ico_acciones
+				&:hover
+					color gris_oscuro
+			input.buscar
+				background url('search-white.png') no-repeat 10px 6px #fcfcfc
+				border 1px solid lightblue
+				font bold 12px Arial,Helvetica,Sans-serif
+				color #bebebe
+				width 150px
+				padding 6px 15px 6px 35px
+				-webkit-border-radius 20px
+				-moz-border-radius 20px
+				border-radius 20px
+				text-shadow 0 2px 3px rgba(0, 0, 0, 0.1)
+				-webkit-box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+				-moz-box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+				box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+				-webkit-transition all 0.7s ease 0s
+				-moz-transition all 0.7s ease 0s
+				-o-transition all 0.7s ease 0s
+				transition all 0.7s ease 0s
+				&:focus
+					width 200px
+			input.fecha
+				color black
+				height 16px
+				width 220px
+				padding 2px 8px
+				border 1px solid lightblue
+				box-shadow 0px 0px 1px white, 0 10px 15px gris_claro inset
+				border-radius 1px
+				text-align center
+				&:focus
+					border 1px solid white
+				&:valid
+					border 1px solid rosa
+
+body
+	//background -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%) /* FF3.6+ */
+	//background -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))) /* Chrome,Safari4+ */
+	//background -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* Chrome10+,Safari5.1+ */
+	//background -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* Opera 11.10+ */
+	//background -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* IE10+ */
+	//background linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* W3C */
+	
+
+
+	font-family arial-regular
+	font-size 14px
+	margin-top 5em
+	margin-bottom 7em
+.login
+	.bloque_login
+		overflow-x auto
+		background transparent
+		text-align center
+		position fixed
+		width 100%
+		z-index 8
+		top 0
+		.form
+			margin 6px
+			padding 0
+			float right
+			.field
+				position relative
+				display inline-block
+			.field i
+					left 14px
+					top 0px
+					position absolute
+					height 25px
+					width 25px
+					border-right 1px solid rgba(0, 0, 0, 0.1)
+					box-shadow 1px 0 0 rgba(255, 255, 255, 0.7)
+					color #777777
+					text-align center
+					line-height 28px
+					transition all 0.3s ease-out
+					pointer-events none
+				input[type=text],input[type=password]
+					font-family 'Lato', Calibri, Arial, sans-serif
+					font-size 12px
+					font-weight 200
+					text-shadow 0 1px 0 rgba(255,255,255,0.8)
+					/* Size and position */
+					width 60%
+					//padding 10px 18px 10px 45px
+					padding 5px 5px 5px 40px
+					/* Styles */
+					border none /* Remove the default border */
+					box-shadow inset 0 0 5px rgba(0,0,0,0.1), inset 0 3px 2px rgba(0,0,0,0.1)
+					border-radius 3px
+					background #f9f9f9
+					color #777
+					transition color 0.3s ease-out
+				input[type=text]
+					margin-bottom 2px
+				input[type=text]:hover ~ i,input[type=password]:hover ~ i
+					color  #52cfeb
+				input[type=text]:focus ~ i,input[type=password]:focus ~ i
+					color #42A2BC
+				input[type=text]:focus,input[type=password]:focus,button[type=submit]:focus
+					outline out
+			.submit
+				display inline-block
+				width 30px
+				height 30px
+				padding 2px
+				z-index 16
+				background #ffffff
+				border-radius 50%
+				box-shadow 0 0 2px rgba(0,0,0,0.1), 0 3px 2px rgba(0,0,0,0.1),inset 0 -3px 2px rgba(0,0,0,0.2)
+			.submit:after
+				width 10px
+				height 10px
+				position absolute
+				top -2px
+				left 30px
+				background #ffffff
+				box-shadow 0 62px white, -32px 31px white
+			button
+				width 100%
+				height 100%
+				line-height 1.75
+				color white
+				border none
+				border-radius inherit
+				background linear-gradient(#52cfeb, #42A2BC)
+				box-shadow inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.35), inset 0 3px 2px rgba(255,255,255,0.2), inset 0 -3px 2px rgba(0,0,0,0.1)
+				cursor pointer
+			button:hover,button[type=submit]:focus
+				background #52cfeb
+				transition all 0.3s ease-out
+			button:active
+				background #42A2BC
+				box-shadow inset 0 0 5px rgba(0,0,0,0.3), inset 0 3px 4px rgba(0,0,0,0.3)
+.bloque_logo
+	margin 0
+	padding 0
+	.logo
+		img
+			width 400px
+			height 360px
+	.logo p
+		text-align center
+.contenido
+	font-family arial-regular
+	.div_empresa_servicio
+		position relative
+		background gris_claro
+		display inline-block
+		width 25%
+		vertical-align top
+		margin-right 1%
+		margin-left 1%
+		margin-top 4em
+		border-radius 5px
+		.agregar_sucursal
+			text-align center
+			margin 5px
+			a
+				color rosa
+				&:hover
+					color verde
+		.sucursales
+			padding 2px
+			position relative
+	.div_empresa
+		background gris_oscuro
+		border-radius 5px
+		color white
+		font-size 16px
+		text-align center
+		position relative
+		margin-bottom 0.5em
+		margin 4px
+		padding 4px
+	a.lnk_servicio
+		text-decoration none
+	.div_servicio
+		color black
+		font-size 12px
+		text-align left
+		margin-bottom 0.5em
+		padding 2px 20px
+		&:hover
+			text-shadow 4px 4px 2px rgba(150, 150, 150, 1)
+	.hr_servicio
+		height 10px
+		border-style solid
+		border-color rosa
+		border-width 1px 0 0 0
+		border-radius 20px
+		&:before
+			display block
+			content ""
+			height 10px
+			margin-top -11px
+			border-style solid
+			border-color rosa
+			border-width 0 0 1px 0
+			border-radius 20px
+	.div_catalogos
+		//border 1px solid gris_oscuro
+		position relative
+		background gris_claro
+		display inline-block
+		width 20%
+		vertical-align top
+		margin-right 1%
+		margin-left 1%
+		margin-top 4em
+		border-radius 5px
+		padding 0.2em
+		.catalogos
+			padding 2px
+			position relative
+	a.lnk_catalogo
+		text-decoration none
+	.div_catalogo
+		opacity 0.8
+		border-radius 4px
+		background verde
+		color white
+		text-align left
+		margin-bottom 0.5em
+		margin-top 0.5em
+		padding 2px 20px
+		&:hover
+			opacity 0.6
+			background rosa
+			text-shadow 4px 4px 2px rgba(30, 30, 30, 1)
+#bloque_contacto
+	//display none
+.bloque_mapa
+	display inline-block
+	width 30%
+	vertical-align top
+	margin-right 1%
+	margin-left 1%
+	margin-top 4em
+	margin-bottom 4em
+	.titulo_mapa
+		background verde
+		border-radius 5px 5px 0 0
+		color white
+		font-family arial-regular
+		font-size 16px
+		text-align center
+	.caja_mapa
+		background lightblue
+		border-radius 0 0 5px 5px
+		height 24em
+	.menu_cordenadas
+		overflow-x auto
+		margin 20px
+		padding 0
+		text-align center
+		li
+			display inline-block
+			padding-left 1em
+			a
+				color gris_medio
+				text-decoration none
+.bloque
+	display inline-block
+	width 30%
+	vertical-align top
+	margin-right 1%
+	margin-left 1%
+	margin-top 4em
+	margin-bottom 4em
+	#titulo_bloque_sucursal
+		background rosa
+	.titulo_bloque
+		background c3
+		border-radius 5px 5px 0 0
+		color white
+		font-family arial-regular
+		font-size 16px
+		text-align center
+	h2.enterprise_buscar
+		background gris_medio
+		color gris_claro
+		margin 0
+		padding 10px 0 10px 0
+		text-align center
+	h3.enterprise_buscar
+		background gris_medio
+		color gris_claro
+		margin 0
+		padding 10px 0 10px 0
+		text-align center
+	.caja_buscar
+		border 1px solid lightblue
+		box-shadow 0 0 0 verde, 1px 2px 10px gris_claro inset
+		border-radius 5px
+		margin-top -1em
+		padding 0
+		text-align center
+		width 100%
+		z-index 8
+		.lista_buscar
+			overflow-x auto
+			margin 4px
+			padding 0
+			li
+				display inline-block
+				//padding-left 1em
+				a
+					color gris_claro
+					text-decoration none
+				.buscar
+					background url('search-white.png') no-repeat 10px 6px #fcfcfc
+					border 1px solid lightblue
+					font bold 12px Arial,Helvetica,Sans-serif
+					color #bebebe
+					width 110px
+					padding 6px 15px 6px 35px
+					-webkit-border-radius 20px
+					-moz-border-radius 20px
+					border-radius 20px
+					text-shadow 0 2px 3px rgba(0, 0, 0, 0.1)
+					-webkit-box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+					-moz-box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+					box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+					-webkit-transition all 0.7s ease 0s
+					-moz-transition all 0.7s ease 0s
+					-o-transition all 0.7s ease 0s
+					transition all 0.7s ease 0s
+					&:focus
+						width 260px
+	.mi_hr
+		margin 1.5em
+		height 30px
+		border-style solid
+		border-color rosa
+		border-width 1px 0 0 0
+		border-radius 20px
+		&:before
+			display block
+			content ""
+			height 30px
+			margin-top -31px
+			border-style solid
+			border-color rosa
+			border-width 0 0 1px 0
+			border-radius 20px
+	.caja_buscar_sola
+		border-radius 5px
+		margin-top -3em
+		padding 0
+		text-align center
+		width 100%
+		z-index 8
+		.lista_buscar
+			overflow-x auto
+			margin 4px
+			padding 0
+			li
+				display inline-block
+				//padding-left 1em
+				a
+					color rosa
+					text-decoration none
+				.buscar
+					background url('search-white.png') no-repeat 10px 6px #fcfcfc
+					border 1px solid rosa
+					font bold 12px Arial,Helvetica,Sans-serif
+					color #bebebe
+					width 110px
+					padding 6px 15px 6px 35px
+					-webkit-border-radius 20px
+					-moz-border-radius 20px
+					border-radius 20px
+					text-shadow 0 2px 3px rgba(0, 0, 0, 0.1)
+					-webkit-box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+					-moz-box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+					box-shadow 0 1px 3px rgba(0, 0, 0, 0.15) inset
+					-webkit-transition all 0.7s ease 0s
+					-moz-transition all 0.7s ease 0s
+					-o-transition all 0.7s ease 0s
+					transition all 0.7s ease 0s
+					width 260px
+	.caja_scroll
+		position relative
+		background gris_claro
+		vertical-align top
+		border-radius 5px
+		padding 4px
+	.empresa_scroll
+		background gris_oscuro
+		border-radius 5px
+		color white
+		font-size 11px
+		position relative
+		margin 4px
+		padding 4px
+		.y_empresa
+			display inline-block
+			width 96%
+		.x_empresa
+			vertical-align top
+			display inline-block
+			a
+				color white
+				&:hover
+					color gris_claro
+	.sucursal_scroll
+		background gris_medio
+		border-radius 2px
+		color white
+		font-size 10px
+		position relative
+		margin 4px
+		padding 4px
+		margin-left 2em
+		.x_sucursal
+			vertical-align top
+			display inline-block
+			width 6%
+			.checkbox
+				background url('arrow.png')
+		.y_sucursal
+			display inline-block
+	.profiler
+		background gris_medio
+		border-radius 10px
+		position relative
+		.profiler_foto
+			display inline-block
+			margin 4px
+			img
+				width 100px
+				height 100px
+		.profiler_foto p
+			margin 1em
+		.profiler_datos
+			margin 4px
+			display inline-block
+			position absolute
+			h2, h3, h5
+				position relative
+				color white
+				margin 0
+				padding 0
+	.cmn-toggle
+		position absolute
+		margin-left -9999px
+		visibility hidden
+	.cmn-toggle + label
+		display block
+		position relative
+		cursor pointer
+		outline none
+		-webkit-user-select none
+		-moz-user-select none
+		-ms-user-select none
+		user-select none
+	input.cmn-toggle-round + label
+		margin 8px
+		padding 2px
+		width 100px
+		height 20px
+		background-color #dddddd
+		-webkit-border-radius 20px
+		-moz-border-radius 20px
+		-ms-border-radius 20px
+		-o-border-radius 20px
+		border-radius 20px
+	input.cmn-toggle-round + label:before, input.cmn-toggle-round + label:after
+		display block
+		position absolute
+		top 1px
+		left 1px
+		bottom 1px
+		content ""
+	input.cmn-toggle-round + label:before
+		right 1px
+		background-color #dddddc
+		-webkit-border-radius 20px
+		-moz-border-radius 20px
+		-ms-border-radius 20px
+		-o-border-radius 20px
+		border-radius 20px
+		-webkit-transition background 0.4s
+		-moz-transition background 0.4s
+		-o-transition background 0.4s
+		transition background 0.4s
+	input.cmn-toggle-round + label:after
+		width 19px
+		background-color #fff
+		-webkit-border-radius 100%
+		-moz-border-radius 100%
+		-ms-border-radius 100%
+		-o-border-radius 100%
+		border-radius 100%
+		-webkit-box-shadow 0 2px 5px rgba(0, 0, 0, 0.3)
+		-moz-box-shadow 0 2px 5px rgba(0, 0, 0, 0.3)
+		box-shadow 0 2px 5px rgba(0, 0, 0, 0.3)
+		-webkit-transition margin 0.4s
+		-moz-transition margin 0.4s
+		-o-transition margin 0.4s
+		transition margin 0.4s
+	input.cmn-toggle-round:checked + label:before
+		background-color #1cb28c
+	input.cmn-toggle-round:checked + label:after
+		margin-left 84px
+	.caja_incide
+		.menu_incide
+			overflow-x auto
+			margin 4px
+			padding 0
+			li
+				display inline-block
+				padding-left 0.5em
+				span
+					color gris_oscuro
+					font-weight bold
+					font-size 16px
+					text-shadow 4px 4px 2px rgba(150, 150, 150, 1)
+	.caja_incide_existe
+		.menu_incide_existe
+			li
+				display inline-block
+				padding-left 0.5em
+				span
+					border 1px solid verde
+					box-shadow 0 0 0 verde, 1px 2px 10px gris_claro inset
+					border-radius 5px
+					padding 10px
+					text-align center
+					color gris_oscuro
+					font-weight bold
+					font-size 16px
+					text-shadow 4px 4px 2px rgba(150, 150, 150, 1)
+				a
+					color verde
+					&:hover
+						color red
+	.enterprise
+		background gris_medio
+		border-radius 10px
+		position relative
+		.enterprise_foto
+			display inline-block
+			margin 4px
+			img
+				width 100px
+				height 100px
+		.enterprise_foto p
+			margin 1em
+		.enterprise_datos
+			margin 4px
+			display inline-block
+			position absolute
+			h2, h3, h5
+				position relative
+				color white
+				margin 0
+				padding 0
+	.caja_bloque
+		border-radius 0 0 5px 5px
+		background gris_medio
+		.campos_bloque
+			.ul_bloque
+				width 800px
+				list-style-type none
+				margin 0
+				padding 0.1em
+				.li_bloque
+					color gris_claro
+					font-family arial-regular
+					font-size 14px
+					padding 0.2em
+					.etiquetas_bloque
+						width 135px
+						margin-top 2px
+						display inline-block
+						float left
+						padding 2px
+					.reducir
+						width 110px
+					.etiquetas_bloque_consulta
+						color white
+						height auto
+						display inline-block
+						width 240px
+						padding 2px 8px
+						border 1px solid lightblue
+						box-shadow 0 0 0 verde, 1px 2px 10px gris_claro inset
+						border-radius 1px
+					.color_sucursal
+						border 1px solid rosa
+					.inputs_bloque
+						color black
+						height 16px
+						width 220px
+						padding 2px 8px
+						border 1px solid lightblue
+						box-shadow 0px 0px 1px c1, 0 10px 15px gris_claro inset
+						border-radius 1px
+						&:focus
+							border 1px solid white
+						&:valid
+							border 1px solid c1
+						&:valid ~ .viñeta::before
+							content "\2713"
+							color lightblue
+						&:invalid
+							border 1px solid rojo_vineta
+						&:invalid ~ .viñeta::before
+							content "\2613"
+							color rojo_vineta
+					.viñeta
+						display inline-block
+					.textarea_bloque
+						color black
+						height 80px
+						width 220px
+						resize vertical
+						padding 2px 8px
+						border 1px solid lightblue
+						box-shadow 0px 0px 1px verde, 0 10px 15px gris_claro inset
+						border-radius 1px
+						&:focus
+							border 1px solid white
+						&:valid
+							border 1px solid lightgreen
+						&:valid ~ .viñeta::before
+							content "\2713"
+							color lightgreen
+						&:invalid
+							border 1px solid rojo_vineta
+						&:invalid ~ .viñeta::before
+							content "\2613"
+							color rojo_vineta
+					.viñeta
+						display inline-block
+					.select_bloque
+						color black
+						height 22px
+						width 238px
+						padding 2px 8px
+						border 1px solid lightblue
+						box-shadow 0px 0px 1px c1, 0 10px 15px gris_claro inset
+						border-radius 1px
+						&:focus
+							border 1px solid white
+						&:valid
+							border 1px solid c1
+						&:valid ~ .viñeta::before
+							content "\2713"
+							color lightblue
+						&:invalid
+							border 1px solid rojo_vineta
+						&:invalid ~ .viñeta::before
+							content "\2613"
+							color rojo_vineta
+					.viñeta
+						display inline-block
+					.radio_bloque:not(old)
+						width 2em
+						margin 0
+						padding 0
+						font-size 1em
+						opacity 0
+						&:not(old) + label
+							display inline-block
+							margin-left -2em
+							line-height 1.5em
+						&:not(old) + label > span
+							display inline-block
+							width 0.875em
+							height 0.875em
+							margin 0.25em 0.5em 0.25em 0.25em
+							border 0.0625em solid gris_claro_rgb_1
+							border-radius 0.25em
+							background gris_claro_rgb_2
+							background-image -moz-linear-gradient(gris_claro_rgb_3,gris_claro_rgb_2)
+							background-image -ms-linear-gradient(gris_claro_rgb_3,gris_claro_rgb_2)
+							background-image -o-linear-gradient(gris_claro_rgb_3,gris_claro_rgb_2)
+							background-image -webkit-linear-gradient(gris_claro_rgb_3,gris_claro_rgb_2)
+							background-image linear-gradient(gris_claro_rgb_3,gris_claro_rgb_2)
+							vertical-align bottom
+						&:not(old):checked + label > span
+							background-image -moz-linear-gradient(gris_claro_rgb_2,gris_claro_rgb_3)
+							background-image -ms-linear-gradient(gris_claro_rgb_2,gris_claro_rgb_3)
+							background-image -o-linear-gradient(gris_claro_rgb_2,gris_claro_rgb_3)
+							background-image -webkit-linear-gradient(gris_claro_rgb_2,gris_claro_rgb_3)
+							background-image linear-gradient(gris_claro_rgb_2,gris_claro_rgb_3)
+						&:not(old):checked +  label > span > span
+							display block
+							width 0.5em
+							height 0.5em
+							margin 0.125em
+							border 0.0625em solid c3
+							border-radius 0.125em
+							background c3
+							background-image -moz-linear-gradient(c3,c3)
+							background-image -ms-linear-gradient(c3,c3)
+							background-image -o-linear-gradient(c3,c3)
+							background-image -webkit-linear-gradient(c3,c3)
+							background-image linear-gradient(c3,c3)
+		.incide_empleado
+			//margin-top 3.2em
+			background gris_claro
+			border-radius 0.5em 0.5em 0.5em 0.5em
+			a.lnk_empleado
+				text-decoration none
+			.div_empleado
+				color black
+				font-size 16px
+				text-align left
+				height 40px
+				//margin-bottom 2em
+				padding 1px 2px
+				&:hover
+					text-shadow 4px 4px 2px rgba(120, 120, 120, 1)
+			.hr_empleado
+				border-style solid
+				border-color verde
+				border-width 1px 0 0 0
+				border-radius 20px
+				margin 0
+				&:before
+					display block
+					content ""
+					height 10px
+					margin-top -11px
+					border-style solid
+					border-color verde
+					border-width 0 0 1px 0
+					border-radius 20px
+	#quitafondo_lista_empleados_sucursal
+		background none
+	.redondear
+		border-radius 5px 5px 5px 5px
+	.caja_foto
+		border 0
+		border-radius 0 0 5px 5px
+		background gris_medio
+		.foto
+			margin 0
+			img
+				width 180px
+				height 180px
+				border-radius 20px
+		.foto p
+			margin 0
+			text-align center
+		.foto i
+			color gris_claro
+			position absolute
+			margin-top -2em
+			margin-left -0.5em
+	.menu_foto
+		margin 10px
+		padding 0
+		text-align center
+		li
+			display inline-block
+			padding-left 1em
+			.examinar
+				color white
+				background verde
+				border-radius 4px
+				border 1px solid gris_claro
+				&:hover
+					background-color rosa
+			input[type=submit]
+				text-decoration none
+				background verde
+				border-radius 4px
+				border 1px solid gris_claro
+				cursor pointer
+				color white
+				padding 4px 12px
+				text-shadow 0px 1px 0px #5b8a3c
+				&:hover
+					background-color rosa
+				&:active
+					position relative
+	.bloque_catalogo
+		margin 0px
+		padding 0px
+		width 100%
+		-moz-border-radius-bottomleft 0px
+		-webkit-border-bottom-left-radius 0px
+		border-bottom-left-radius 0px
+		-moz-border-radius-bottomright 0px
+		-webkit-border-bottom-right-radius 0px
+		border-bottom-right-radius 0px
+		-moz-border-radius-topright 0px
+		-webkit-border-top-right-radius 0px
+		border-top-right-radius 0px
+		-moz-border-radius-topleft 0px
+		-webkit-border-top-left-radius 0px
+		border-top-left-radius 0px
+		.tabla_catalogo
+			border-collapse collapse
+			border-spacing 0
+			width 100%
+			height 100%
+			margin 0px
+			padding 0px
+	.bloque_catalogo tr:last-child td:last-child
+		-moz-border-radius-bottomright 0px
+		-webkit-border-bottom-right-radius 0px
+		border-bottom-right-radius 0px
+	.bloque_catalogo table tr:first-child td:first-child
+		-moz-border-radius-topleft 0px
+		-webkit-border-top-left-radius 0px
+		border-top-left-radius 0px
+	.bloque_catalogo table tr:first-child td:last-child
+		-moz-border-radius-topright 0px
+		-webkit-border-top-right-radius 0px
+		border-top-right-radius 0px
+	.bloque_catalogo tr:last-child td:first-child
+		-moz-border-radius-bottomleft 0px
+		-webkit-border-bottom-left-radius 0px
+		border-bottom-left-radius 0px
+	.bloque_catalogo tr:hover td {}
+	.bloque_catalogo tr:nth-child(odd)
+		background-color gris_claro
+		border 1px solid gris_medio
+	.bloque_catalogo tr:nth-child(even)
+		background-color gris_claro
+		border 1px solid gris_medio
+	.bloque_catalogo td
+		vertical-align middle
+		//border 1px solid gris_medio
+		//border-width 0px 1px 1px 0px
+		text-align left
+		padding 2px
+		font-size 12px
+		font-family Arial
+		font-weight normal
+		color #000000 //color de letra tabla
+	.bloque_catalogo tr:last-child td
+		border-width 0px 1px 0px 0px
+	.bloque_catalogo tr td:last-child
+		border-width 0px 0px 1px 0px
+	.bloque_catalogo tr:last-child td:last-child
+		border-width 0px 0px 0px 0px
+	.bloque_catalogo tr:first-child td
+		background-color gris_oscuro
+		text-align left
+		border-width 0px 0px 1px 1px
+		font-size 14px
+		font-family Arial
+		//font-weight bold
+		color #ffffff
+	.bloque_catalogo tr:first-child td:first-child
+		border-width 0px 0px 1px 0px
+	.bloque_catalogo tr:first-child td:last-child
+		border-width0px 0px 1px 1px
+	a
+		text-decoration none
+		margin 0
+		padding 0
+	a.guardar_renglon
+		color green
+	a.eliminar_renglon
+		color red
+	.lista_empleados_sucursal
+		//margin-top 3.1em
+		-moz-border-radius-bottomleft 0px
+		-webkit-border-bottom-left-radius 0px
+		border-bottom-left-radius 0px
+		-moz-border-radius-bottomright 0px
+		-webkit-border-bottom-right-radius 0px
+		border-bottom-right-radius 0px
+		-moz-border-radius-topright 0px
+		-webkit-border-top-right-radius 0px
+		border-top-right-radius 0px
+		-moz-border-radius-topleft 0px
+		-webkit-border-top-left-radius 0px
+		border-top-left-radius 0px
+		h3,h4
+			color white
+			text-align center
+			padding 0
+			margin 0
+		.tabla_empleados_sucursal
+			border-collapse collapse
+			border-spacing 0
+			width 100%
+	#ampliar_tabla
+		width 210%
+	#en_top
+		margin-top 3.2em
+	.lista_empleados_sucursal tr:last-child td:last-child
+		-moz-border-radius-bottomright 0px
+		-webkit-border-bottom-right-radius 0px
+		border-bottom-right-radius 0px
+	.lista_empleados_sucursal table tr:first-child td:first-child
+		-moz-border-radius-topleft 0px
+		-webkit-border-top-left-radius 0px
+		border-top-left-radius 0px
+	.lista_empleados_sucursal table tr:first-child td:last-child
+		-moz-border-radius-topright 0px
+		-webkit-border-top-right-radius 0px
+		border-top-right-radius 0px
+	.lista_empleados_sucursal tr:last-child td:first-child
+		-moz-border-radius-bottomleft 0px
+		-webkit-border-bottom-left-radius 0px
+		border-bottom-left-radius 0px
+	.lista_empleados_sucursal tr:hover td {}
+	.lista_empleados_sucursal tr:nth-child(odd)
+		background-color gris_claro
+		//border 1px solid gris_medio
+	.lista_empleados_sucursal tr:nth-child(even)
+		background-color gris_claro
+		//border 1px solid gris_medio
+	.lista_empleados_sucursal td
+		vertical-align middle
+		//border 1px solid gris_medio
+		//border-width 0px 1px 1px 0px
+		text-align left
+		padding 2px
+		//font-size 12px
+		//font-family Arial
+		//font-weight normal
+		color #000000 //color de letra tabla
+	.lista_empleados_sucursal tr:last-child td
+		border-width 0px 1px 0px 0px
+	.lista_empleados_sucursal tr td:last-child
+		border-width 0px 0px 1px 0px
+	.lista_empleados_sucursal tr:last-child td:last-child
+		border-width 0px 0px 0px 0px
+	.lista_empleados_sucursal tr:first-child td
+		background-color verde
+		opacity 0.5
+		text-align left
+		border-width 0px 0px 1px 1px
+		color white
+		//border-radius 0 0 0.4em 0.8em
+	.lista_empleados_sucursal tr:first-child td:first-child
+		border-width 0px 0px 1px 0px
+	.lista_empleados_sucursal tr:first-child td:last-child
+		border-width0px 0px 1px 1px
+	// termina lista de empleados en sucursal
+.reducir
+	width 28%
+.aumentar
+	width 60%
+
+ .divResultados
+		position absolute
+		margin-left auto
+		margin-right auto
+		width: 320px
+		left: 45%
+		margin-top -10px    
+		border solid 1px #dedede
+		border-top 0px
+		border-radius 6px
+		box-shadow 0px 0px 5px #999
+		border-width 1px 1px 1px
+		border-style solid
+		border-color gris_claro #DEDEDE #DEDEDE
+		background-color white
+		z-index 200
+		.resultado_ind
+			padding:9px
+			border-top solid 1px #dedede
+			font-size 12px
+			height 40px
+			margin 1px 1px 1px 1px
+			overflow hidden
+			img
+				float left
+				height 40px
+				width 40px
+				margin-right 6px
+		.resultado_ind:hover
+			background gris_medio
+			color #FFFFFF
+			cursor pointer
+	.divResultados2
+		left: 8%
+	.divResultados3
+		left: 36%
+
+// inicia carousel
+.carousel-wrapper
+	position relative
+	.carousel-item
+		margin-right 100px
+		margin-left 100px
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		padding 25px 50px
+		opacity 0
+		transition all 0.5s ease-in-out
+		.arrow
+			position absolute
+			top 0
+			display block
+			width 50px
+			height 100%
+			-webkit-tap-highlight-color rgba(0,0,0,0)
+			background url('arrow.png') 50% 50% / 45px no-repeat
+			&.arrow-prev
+				left 0
+			&.arrow-next
+				right 0
+				-webkit-transform rotate(180deg)
+				transform rotate(180deg)
+		// para una flecha blanca
+		&.light
+			color white
+			.arrow
+				background: url('arrow-light.png') 50% 50% / 45px no-repeat
+		//
+		.foto-item
+			img
+				width 600px
+				height 400px
+		.foto-item p
+			text-align center
+
+[id^="target-item"]
+	display none
+
+.item-1
+	z-index 2
+	opacity 1
+
+*:target ~ .item-1
+	opacity 0
+
+#target-item-1:target ~ .item-1
+	opacity 1
+
+#target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3
+	z-index 3
+	opacity 1
+// termina carousel
+
+footer
+	background c4
+	bottom 0
+	position fixed
+	width 100%
+	.redes_sociales
+		overflow-x auto
+		margin 0
+		padding 0
+		li
+			display inline-block
+			float right
+			padding 0.5em
+			a
+				color gris_claro
+				font-size 20px
+				text-decoration none
+			a.ico_redes
+				&:hover
+					color white
+
+// inicia pop-up
+.img-replace
+	display inline-block
+	overflow hidden
+	text-indent 100%
+	color transparent
+	white-space nowrap
+	
+.cd-popup-trigger
+	display block
+	width 170px
+	height 50px
+	line-height 50px
+	margin 3em auto
+	text-align center
+	color #FFF
+	font-size 14px
+	font-size 0.875rem
+	font-weight bold
+	text-transform uppercase
+	border-radius 50em
+	background #35a785
+	box-shadow 0 3px 0 rgba(0, 0, 0, 0.07)
+
+.cd-popup
+	position fixed
+	left 0
+	top 0
+	height 100%
+	width 100%
+	// fondo atras pop-up
+	background-color rgba(10, 10, 10, 0.7)
+	//
+	opacity 0
+	visibility hidden
+	-webkit-transition opacity 0.3s 0s, visibility 0s 0.3s
+	-moz-transition opacity 0.3s 0s, visibility 0s 0.3s
+	transition opacity 0.3s 0s, visibility 0s 0.3s
+
+.cd-popup.is-visible
+	opacity 1
+	visibility visible
+	-webkit-transition opacity 0.3s 0s, visibility 0s 0s
+	-moz-transition opacity 0.3s 0s, visibility 0s 0s
+	transition opacity 0.3s 0s, visibility 0s 0s
+
+.cd-popup-container
+	position relative
+	width 90%
+	max-width 400px
+	margin 4em auto
+	background #FFF
+	border-radius .25em .25em .4em .4em
+	text-align center
+	box-shadow 0 0 20px rgba(0, 0, 0, 0.2)
+	-webkit-transform translateY(-40px)
+	-moz-transform translateY(-40px)
+	-ms-transform translateY(-40px)
+	-o-transform translateY(-40px)
+	transform translateY(-40px)
+	/* Force Hardware Acceleration in WebKit */
+	-webkit-backface-visibility hidden
+	-webkit-transition-property -webkit-transform
+	-moz-transition-property -moz-transform
+	transition-property transform
+	-webkit-transition-duration 0.3s
+	-moz-transition-duration 0.3s
+	transition-duration 0.3s
+	a
+		color #35a785
+		text-decoration none
+	ol , ul, li
+		margin 0
+		padding 0
+		border 0
+		font-size 100%
+		font inherit
+		vertical-align baseline
+	ol, ul
+		list-style none
+
+.cd-popup-container p
+	// color letra mensaje pop-up
+	color black
+	//text-shadow 4px 4px 2px rgba(150, 150, 150, 1)
+	padding 3em 1em
+	font-size 16px
+
+.cd-popup-container .cd-buttons:after
+	content ""
+	display table
+	clear both
+
+.cd-popup-container .cd-buttons li
+	float left
+	// por si van 2 botones
+	//width 50%
+	// para un solo boton
+	width 100%
+
+.cd-popup-container .cd-buttons a
+	display block
+	height 60px
+	line-height 60px
+	text-transform uppercase
+	color #FFF
+	-webkit-transition background-color 0.2s
+	-moz-transition background-color 0.2s
+	transition background-color 0.2s
+
+.cd-popup-container .cd-buttons li:first-child a
+	background #fc7169
+	border-radius 0 0 0 .25em
+
+.no-touch .cd-popup-container .cd-buttons li:first-child a:hover
+	background-color #fc8982
+
+.cd-popup-container .cd-buttons li:last-child a
+	// color fondo boton
+	background verde
+	border-radius 0 0 .25em 0
+
+.no-touch .cd-popup-container .cd-buttons li:last-child a:hover
+	// color fondo boton, curso sobre
+	background-color rosa
+
+.cd-popup-container .cd-popup-close
+	position absolute
+	top 8px
+	right 8px
+	width 30px
+	height 30px
+
+.cd-popup-container .cd-popup-close::before, .cd-popup-container .cd-popup-close::after
+	content ''
+	position absolute
+	top 12px
+	width 14px
+	height 3px
+	background-color #8f9cb5
+
+.cd-popup-container .cd-popup-close::before
+	-webkit-transform rotate(45deg)
+	-moz-transform rotate(45deg)
+	-ms-transform rotate(45deg)
+	-o-transform rotate(45deg)
+	transform rotate(45deg)
+	left 8px
+
+.cd-popup-container .cd-popup-close::after
+	-webkit-transform rotate(-45deg)
+	-moz-transform rotate(-45deg)
+	-ms-transform rotate(-45deg)
+	-o-transform rotate(-45deg)
+	transform rotate(-45deg)
+	right 8px
+
+.is-visible .cd-popup-container
+	-webkit-transform translateY(0)
+	-moz-transform translateY(0)
+	-ms-transform translateY(0)
+	-o-transform translateY(0)
+	transform translateY(0)
+// termina pop-up
+
+.message
+	box-shadow inset 0 -1px 0 rgba(255,255,255,.4)
+	width 100%
+	border 1px solid
+	color #fff
+	padding 10px
+	position fixed
+	_position absolute
+	text-shadow 0 1px 0 rgba(0,0,0,.5)
+	height 35px
+	z-index 10
+	top 0
+	display none
+
+.info
+	background-color #4ea5cd
+	border-color #3b8eb5
+
+.error
+	background-color #de4343
+	border-color #c43d3d
+
+.warning
+	background-color #eaaf51
+	border-color #d99a36
+
+.success
+	background-color #61b832
+	border-color #55a12c
+
+.message h3
+	margin 0 0 0 0
+	text-align center
+
+.message p
+	margin 0
+	text-align center
+
+// para celulares
+@media only screen and (min-width : 320px) and (max-width : 767px)
+	.contenido
+		.div_catalogos
+		.div_empresa_servicio
+		.bloque_mapa
+			width 132%
+			.caja_mapa
+				height 12em
+		.div_catalogos
+		.bloque
+			margin-bottom -4em
+			width 132%
+			br
+				display none
+			.bloque_catalogo
+				margin-top 1em
+			.caja_foto
+				.foto
+					img
+						width 100px
+						height 100px
+				.foto i
+					margin-top -1.3em
+			.caja_buscar
+				margin-bottom 1.2em
+			.profiler
+				margin-bottom 0.8em
+			.enterprise
+				margin-bottom 1.8em
+			.lista_empleados_sucursal
+				margin-top 0.8em
+		.caja_acciones
+			.menu_acciones
+				li
+					.buscar
+						height 12px
+						width 140px
+	.carousel-wrapper
+		.carousel-item
+			margin-right 10px
+			margin-left 10px
+			.arrow, &.light .arrow
+				background-size 25px
+				background-position 10px 50%
+			.foto-item
+				margin-top 100px
+				img
+					width 200px
+					height 150px
+
+// para tablets
+@media only screen and (min-width : 768px) and (max-width : 1024px)
+	.contenido
+		.div_catalogos
+		.div_empresa_servicio
+		.bloque_mapa
+		.bloque
+			margin-bottom -4em
+			width 54%
+			br
+				display none
+			.bloque_catalogo
+				margin-top 1em
+			.caja_foto
+				.foto
+					img
+						width 120px
+						height 120px
+				.foto i
+					margin-top -1.5em
+			.caja_buscar
+				margin-bottom 1.2em
+			.profiler
+				margin-bottom 0.8em
+			.enterprise
+				margin-bottom 1.8em
+			.lista_empleados_sucursal
+				margin-top 0.8em
+	.carousel-wrapper
+		.carousel-item
+			margin-right 50px
+			margin-left 50px
+			.arrow, &.light .arrow
+				background-size 40px
+				background-position 10px 50%
+			.foto-item
+				margin-top 50px
+				img
+					width 320px
+					height 250px
+
+// para pop-up
+@media only screen and (min-width: 1170px) {
+	.cd-popup-trigger {
+		margin 6em auto
+	}
+	.cd-popup-container {
+		margin 8em auto
+	}
+}
