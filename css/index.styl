@@ -101,15 +101,7 @@ nav
 					border 1px solid rosa
 
 body
-	//background -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%) /* FF3.6+ */
-	//background -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))) /* Chrome,Safari4+ */
-	//background -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* Chrome10+,Safari5.1+ */
-	//background -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* Opera 11.10+ */
-	//background -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* IE10+ */
-	//background linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%) /* W3C */
-	
-
-
+	background rgb(246, 248, 248)
 	font-family arial-regular
 	font-size 14px
 	margin-top 5em
@@ -272,7 +264,7 @@ body
 	.div_catalogos
 		//border 1px solid gris_oscuro
 		position relative
-		background gris_claro
+		background gris_oscuro
 		display inline-block
 		width 20%
 		vertical-align top
@@ -287,17 +279,16 @@ body
 	a.lnk_catalogo
 		text-decoration none
 	.div_catalogo
-		opacity 0.8
+		//opacity 0.8
 		border-radius 4px
-		background verde
+		background c5
 		color white
 		text-align left
 		margin-bottom 0.5em
 		margin-top 0.5em
 		padding 2px 20px
 		&:hover
-			opacity 0.6
-			background rosa
+			background c3
 			text-shadow 4px 4px 2px rgba(30, 30, 30, 1)
 #bloque_contacto
 	//display none
@@ -914,7 +905,7 @@ body
 	.bloque_catalogo tr:last-child td:last-child
 		border-width 0px 0px 0px 0px
 	.bloque_catalogo tr:first-child td
-		background-color c3
+		background-color gris_oscuro
 		text-align left
 		border-width 0px 0px 1px 1px
 		font-size 14px
@@ -1015,7 +1006,35 @@ body
 	width 28%
 .aumentar
 	width 60%
-
+.bloque_elementos
+	display inline-block
+	margin-top 7em
+	.tabla_elementos
+		display table
+		background red
+		.columna_elementos
+			display table-cell
+			background gris_oscuro
+			color white
+			.span_col
+				display block
+				text-align center
+				font-size 18px
+			.celda_elemento				
+				.span_cel
+					color black
+					//border-radius 5px
+					display block
+					width 400px
+					background gris_claro
+					margin 15px 0 10px 0
+					font-size 14px
+					margin 2px
+					text-align left
+					.tabla_cantidades
+						display inline-block
+						margin-left 25px
+						width 30px
  .divResultados
 		position absolute
 		margin-left auto
